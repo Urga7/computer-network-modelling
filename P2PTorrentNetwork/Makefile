@@ -1,13 +1,13 @@
 #
-# OMNeT++/OMNEST Makefile for homework_01
+# OMNeT++/OMNEST Makefile for P2PTorrentNetwork
 #
 # This file was generated with the command:
-#  opp_makemake -f --deep -O out -KQUEUEINGLIB_PROJ=../queueinglib -DQUEUEING_IMPORT -I. -I$$\(QUEUEINGLIB_PROJ\) -L$$\(QUEUEINGLIB_PROJ\) -lqueueinglib$$\(D\)
+#  opp_makemake -f --deep -O out -KQUEUEINGLIB_PROJ=C:/Programs/omnetpp-6.1-windows-x86_64/omnetpp-6.1/samples/queueinglib -DQUEUEING_IMPORT -I. -I$$\(QUEUEINGLIB_PROJ\) -L$$\(QUEUEINGLIB_PROJ\) -lqueueinglib$$\(D\)
 #
 
 # Name of target to be created (-o option)
 TARGET_DIR = .
-TARGET_NAME = homework_01$(D)
+TARGET_NAME = P2PTorrentNetwork$(D)
 TARGET = $(TARGET_NAME)$(EXE_SUFFIX)
 TARGET_IMPLIB = $(TARGET_NAME)$(IMPLIB_SUFFIX)
 TARGET_IMPDEF = $(TARGET_NAME)$(IMPDEF_SUFFIX)
@@ -42,7 +42,7 @@ MSGFILES =
 SMFILES =
 
 # Other makefile variables (-K)
-QUEUEINGLIB_PROJ=../queueinglib
+QUEUEINGLIB_PROJ=C:/Programs/omnetpp-6.1-windows-x86_64/omnetpp-6.1/samples/queueinglib
 
 #------------------------------------------------------------------------------
 
