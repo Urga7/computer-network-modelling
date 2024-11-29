@@ -1,2 +1,52 @@
-.metadata
+# General system files
+.DS_Store
+Thumbs.db
+
+# Build and temporary files
 inet4.5
+.settings/
+.out/
+out/
+.cproject
+.oppbuildspec
+.project
+
+# Makefile generated outputs
+Makefile
+Makefile.*
+*.o
+*.a
+*.so
+*.exe
+*.out
+*.log
+
+# OMNeT++ specific temporary files
+*.opp
+*.ned.bak
+
+# Qt-specific files
+.qtenvrc
+
+# Result files
+results/
+*.sca
+*.vec
+*.dat
+*.log
+*.vci
+*.keyframe
+*.gpd
+
+# Backup files
+*~
+*.bak
+*.tmp
+
+# Other IDE-specific files
+.vscode/
+.idea/
+*.iml
+
+# Other
+.metadata
