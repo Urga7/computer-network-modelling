@@ -1,0 +1,106 @@
+version 3
+run General-0-20241129-09:19:44-8372
+attr configname General
+attr datetime 20241129-09:19:44
+attr datetimef 20241129-091944
+attr experiment General
+attr inifile omnetpp.ini
+attr iterationvars ""
+attr iterationvarsd ""
+attr iterationvarsf ""
+attr measurement ""
+attr network P2PNetwork
+attr processid 8372
+attr repetition 0
+attr replication #0
+attr resultdir results
+attr runnumber 0
+attr seedset 0
+config network P2PNetwork
+config **.mySource1.interArrivalTime "truncnormal(0.5s, 0.25s)"
+config **.mySource2.interArrivalTime "truncnormal(0.6s, 0.3s)"
+config **.mySource3.interArrivalTime "truncnormal(0.8s, 0.4s)"
+config **.mySource4.interArrivalTime "truncnormal(1s, 0.5s)"
+config **.myQueue1.serviceTime "truncnormal(0.8s, 0.4s)"
+config **.myQueue2.serviceTime "truncnormal(1s, 0.5s)"
+config **.myQueue3.serviceTime "truncnormal(1.3s, 0.65s)"
+config **.myQueue4.serviceTime "truncnormal(1.5s, 0.75s)"
+
+par P2PNetwork.mySource1.out.channel typename "\"ned.IdealChannel\""
+par P2PNetwork.mySource2.out.channel typename "\"ned.IdealChannel\""
+par P2PNetwork.mySource3.out.channel typename "\"ned.IdealChannel\""
+par P2PNetwork.mySource4.out.channel typename "\"ned.IdealChannel\""
+par P2PNetwork.myQueue1.out.channel typename "\"ned.IdealChannel\""
+par P2PNetwork.myQueue2.out.channel typename "\"ned.IdealChannel\""
+par P2PNetwork.myQueue3.out.channel typename "\"ned.IdealChannel\""
+par P2PNetwork.myQueue4.out.channel typename "\"ned.IdealChannel\""
+par P2PNetwork.myQueue1.outNet.channel typename "\"ned.IdealChannel\""
+par P2PNetwork.myQueue2.outNet.channel typename "\"ned.IdealChannel\""
+par P2PNetwork.myQueue3.outNet.channel typename "\"ned.IdealChannel\""
+par P2PNetwork.myQueue4.outNet.channel typename "\"ned.IdealChannel\""
+par P2PNetwork.myQueue1 typename "\"myQueue\""
+par P2PNetwork.myQueue1 capacity 100
+par P2PNetwork.myQueue1 resources 2
+par P2PNetwork.myQueue1 serviceTime "truncnormal(0.8s, 0.4s)"
+attr unit s
+par P2PNetwork.myQueue1 address 1
+par P2PNetwork.myQueue2 typename "\"myQueue\""
+par P2PNetwork.myQueue2 capacity 100
+par P2PNetwork.myQueue2 resources 2
+par P2PNetwork.myQueue2 serviceTime "truncnormal(1s, 0.5s)"
+attr unit s
+par P2PNetwork.myQueue2 address 2
+par P2PNetwork.myQueue3 typename "\"myQueue\""
+par P2PNetwork.myQueue3 capacity 100
+par P2PNetwork.myQueue3 resources 2
+par P2PNetwork.myQueue3 serviceTime "truncnormal(1.3s, 0.65s)"
+attr unit s
+par P2PNetwork.myQueue3 address 3
+par P2PNetwork.myQueue4 typename "\"myQueue\""
+par P2PNetwork.myQueue4 capacity 100
+par P2PNetwork.myQueue4 resources 2
+par P2PNetwork.myQueue4 serviceTime "truncnormal(1.5s, 0.75s)"
+attr unit s
+par P2PNetwork.myQueue4 address 4
+par P2PNetwork.mySource1 typename "\"mySource\""
+par P2PNetwork.mySource1 maxJobs 100
+par P2PNetwork.mySource1 numJobs 2
+par P2PNetwork.mySource1 interArrivalTime "truncnormal(0.5s, 0.25s)"
+attr unit s
+par P2PNetwork.mySource1 startTime 10s
+attr unit s
+par P2PNetwork.mySource1 stopTime 3600s
+attr unit s
+par P2PNetwork.mySource2 typename "\"mySource\""
+par P2PNetwork.mySource2 maxJobs 100
+par P2PNetwork.mySource2 numJobs 2
+par P2PNetwork.mySource2 interArrivalTime "truncnormal(0.6s, 0.3s)"
+attr unit s
+par P2PNetwork.mySource2 startTime 10s
+attr unit s
+par P2PNetwork.mySource2 stopTime 3600s
+attr unit s
+par P2PNetwork.mySource3 typename "\"mySource\""
+par P2PNetwork.mySource3 maxJobs 100
+par P2PNetwork.mySource3 numJobs 2
+par P2PNetwork.mySource3 interArrivalTime "truncnormal(0.8s, 0.4s)"
+attr unit s
+par P2PNetwork.mySource3 startTime 10s
+attr unit s
+par P2PNetwork.mySource3 stopTime 3600s
+attr unit s
+par P2PNetwork.mySource4 typename "\"mySource\""
+par P2PNetwork.mySource4 maxJobs 100
+par P2PNetwork.mySource4 numJobs 2
+par P2PNetwork.mySource4 interArrivalTime "truncnormal(1s, 0.5s)"
+attr unit s
+par P2PNetwork.mySource4 startTime 10s
+attr unit s
+par P2PNetwork.mySource4 stopTime 3600s
+attr unit s
+par P2PNetwork.mySink1 typename "\"mySink\""
+par P2PNetwork.mySink2 typename "\"mySink\""
+par P2PNetwork.mySink3 typename "\"mySink\""
+par P2PNetwork.mySink4 typename "\"mySink\""
+par P2PNetwork typename "\"P2PNetwork\""
+
