@@ -7,14 +7,11 @@ using namespace omnetpp;
 
 class P2PNetwork : public cSimpleModule {
 private:
-    double totalLifespan = 0;
-    int packetCount = 0;
+    simsignal_t networkTime;
 
 public:
     P2PNetwork() {}
     virtual ~P2PNetwork() {}
-    virtual void addPacketLifespan(double lifespan);
-    virtual double getAverageLifespan() const;
 
 protected:
     virtual void initialize() override;

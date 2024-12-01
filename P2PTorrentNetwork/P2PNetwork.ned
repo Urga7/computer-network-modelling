@@ -2,62 +2,67 @@ import ned.IdealChannel;
 
 network P2PNetwork
 {
-    @class(P2PNetwork);
-    @display("bgb=717,723");
+    parameters:
+        @class(P2PNetwork);
+        @display("bgb=717,723");
+        
+        @signal[networkTime](type=symtime_t);
+        @statistic[networkTime](title="Network Time"; source=networkTime; record=vector, mean);
+        
     submodules:
-        myQueue1: myQueue {
+        mm1_1: MM1 {
             @display("p=507,356");
             address = 1;
         }
-        myQueue2: myQueue {
+        mm1_2: MM1 {
             @display("p=346,224");
             address = 2;
         }
-        myQueue3: myQueue {
+        mm1_3: MM1 {
             @display("p=185,356");
             address = 3;
         }
-        myQueue4: myQueue {
+        mm1_4: MM1 {
             @display("p=346,488");
             address = 4;
         }
-        mySource1: mySource {
+        source1: Source {
             @display("p=644,290");
         }
-        mySource2: mySource {
+        source2: Source {
             @display("p=280,71");
         }
-        mySource3: mySource {
+        source3: Source {
             @display("p=51,423");
         }
-        mySource4: mySource {
+        source4: Source {
             @display("p=412,628");
         }
-        mySink1: mySink {
+        sink1: Sink {
             @display("p=644,422");
         }
-        mySink2: mySink {
+        sink2: Sink {
             @display("p=412,69");
         }
-        mySink3: mySink {
+        sink3: Sink {
             @display("p=51,291");
         }
-        mySink4: mySink {
+        sink4: Sink {
             @display("p=280,630");
         }
     connections:
-        mySource1.out --> IdealChannel --> myQueue1.in++;
-        mySource2.out --> IdealChannel --> myQueue2.in++;
-        mySource3.out --> IdealChannel --> myQueue3.in++;
-        mySource4.out --> IdealChannel --> myQueue4.in++;
+        source1.out --> IdealChannel --> mm1_1.in++;
+        source2.out --> IdealChannel --> mm1_2.in++;
+        source3.out --> IdealChannel --> mm1_3.in++;
+        source4.out --> IdealChannel --> mm1_4.in++;
 
-        myQueue1.out --> IdealChannel --> mySink1.in++;
-        myQueue2.out --> IdealChannel --> mySink2.in++;
-        myQueue3.out --> IdealChannel --> mySink3.in++;
-        myQueue4.out --> IdealChannel --> mySink4.in++;
+        mm1_1.out --> IdealChannel --> sink1.in++;
+        mm1_2.out --> IdealChannel --> sink2.in++;
+        mm1_3.out --> IdealChannel --> sink3.in++;
+        mm1_4.out --> IdealChannel --> sink4.in++;
 
-        myQueue1.outNet --> IdealChannel --> myQueue2.in++;
-        myQueue2.outNet --> IdealChannel --> myQueue3.in++;
-        myQueue3.outNet --> IdealChannel --> myQueue4.in++;
-        myQueue4.outNet --> IdealChannel --> myQueue1.in++;
+        mm1_1.outNet --> IdealChannel --> mm1_2.in++;
+        mm1_2.outNet --> IdealChannel --> mm1_3.in++;
+        mm1_3.outNet --> IdealChannel --> mm1_4.in++;
+        mm1_4.outNet --> IdealChannel --> mm1_1.in++;
 }
