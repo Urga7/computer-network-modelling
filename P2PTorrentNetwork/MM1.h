@@ -1,25 +1,23 @@
-
-
-#ifndef MYQUEUE_H_
-#define MYQUEUE_H_
+#ifndef MM1_H_
+#define MM1_H_
 
 #include <omnetpp.h>
 #include <string.h>
 
 using namespace omnetpp;
 
-class myQueue : public cSimpleModule{
+class MM1 : public cSimpleModule{
 private:
 	cQueue queue;
 	cMessage* currentJob;
-	simtime_t serviceTime;
+	simsignal_t droppedPacketsSignal, saturationRatioSignal, queueWaitingTimeSignal, utilisationFactorSignal;
 	int capacity;
 	int length;
 	int address;
 
 public:
-	myQueue();
-	virtual ~myQueue();
+	MM1();
+	virtual ~MM1();
 
 protected:
     virtual void initialize();
@@ -30,4 +28,4 @@ protected:
 
 
 
-#endif /* MYQUEUE_H_ */
+#endif /* MM1_H_ */
