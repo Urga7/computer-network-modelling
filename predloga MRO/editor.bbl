@@ -1,0 +1,16 @@
+\begin{thebibliography}{1}
+
+\bibitem{omnetpp}
+W.~source, ``Orodje omnet++.'' \url{http://www.omnetpp.org/}.
+
+\bibitem{cisco}
+W.~source, ``Cisco routers documentation.'' \url{http://www.cisco.com/}.
+
+\bibitem{Vidmar2002}
+T.~Vidmar, {\em Informacijsko-komunikacijski sistem}.
+\newblock Pasadena, 2002.
+
+\bibitem{mro:mraz}
+M.~Mraz, ``Modeliranje računalniških omrežiji,'' 2024.
+
+\end{thebibliography}

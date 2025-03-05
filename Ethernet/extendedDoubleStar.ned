@@ -1,5 +1,3 @@
-
-
 import inet.node.ethernet.EthernetHub;
 import inet.node.ethernet.Eth100M;
 import inet.node.ethernet.Eth10M;

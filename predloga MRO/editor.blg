@@ -1,0 +1,52 @@
+This is BibTeX, Version 0.99d
+Capacity: max_strings=200000, hash_size=200000, hash_prime=170003
+The top-level auxiliary file: editor.aux
+Reallocating 'name_of_file' (item size: 1) to 28 items.
+A level-1 auxiliary file: EditorContents/navodila.aux
+Reallocating 'name_of_file' (item size: 1) to 7 items.
+The style file: ieeetr.bst
+Reallocating 'name_of_file' (item size: 1) to 11 items.
+Database file #1: references.bib
+Warning--empty journal in mro:mraz
+You've used 4 entries,
+            1876 wiz_defined-function locations,
+            494 strings with 3749 characters,
+and the built_in function-call counts, 540 in all, are:
+= -- 44
+> -- 16
+< -- 0
++ -- 8
+- -- 4
+* -- 22
+:= -- 87
+add.period$ -- 5
+call.type$ -- 4
+change.case$ -- 3
+chr.to.int$ -- 0
+cite$ -- 5
+duplicate$ -- 26
+empty$ -- 74
+format.name$ -- 4
+if$ -- 131
+int.to.chr$ -- 0
+int.to.str$ -- 4
+missing$ -- 3
+newline$ -- 16
+num.names$ -- 4
+pop$ -- 22
+preamble$ -- 1
+purify$ -- 0
+quote$ -- 0
+skip$ -- 14
+stack$ -- 0
+substring$ -- 0
+swap$ -- 1
+text.length$ -- 0
+text.prefix$ -- 0
+top$ -- 0
+type$ -- 0
+warning$ -- 1
+while$ -- 4
+width$ -- 5
+write$ -- 32
+(There was 1 warning)
